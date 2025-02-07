@@ -45,10 +45,10 @@ This is a FastAPI-based API that classifies numbers by checking their mathematic
 ### Setup
 ```sh
 git clone <your-repo-url>
-cd hng_fast_api_devops
+cd hng_devops_api
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
+pip install -rf requirements.txt
 ```
 
 ## Running Locally
@@ -71,8 +71,8 @@ uvicorn main:app --host 0.0.0.0 --port 8000
    [Service]
    User=root
    Group=www-data
-   WorkingDirectory=/var/www/hng_fast_api_devops
-   ExecStart=/var/www/hng_fast_api_devops/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+   WorkingDirectory=/var/www/hng_devops_api
+   ExecStart=/var/www/hng_devops_api/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
    Restart=always
    
    [Install]
