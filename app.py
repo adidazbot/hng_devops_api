@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 
-app = Flask(my_app)
+app = Flask(_name_)
 CORS(app)  # Enable CORS for all routes
 
 # Helper functions
@@ -59,5 +59,5 @@ def classify_number():
     }
     return jsonify(response), 200
 
-if my_app == '__main__':
+if _name_ == '__main__':
     app.run(debug=True)
